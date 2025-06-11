@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Razor Coder | Web Developer</title>
+    <title>Razor Codes | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -18,6 +17,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -25,32 +25,40 @@
 
     <section id="home" class="container section" data-aos="fade-up">
         <h2>Hi, I'm Razor Coder</h2>
-        <p>I craft responsive, elegant websites and full-stack web solutions tailored for modern businesses.</p>
-        <p>I specialize in clean design, efficient code, and full-stack development using the MERN stack.</p>
+        <ul class="point-list">
+            <li>I build elegant, high-performance websites that deliver real business results.</li>
+            <li>I specialize in responsive design, making sure your brand looks perfect on every screen.</li>
+            <li>I combine creative frontend design with scalable backend solutions.</li>
+            <li>Every line of code I write serves performance, usability, and your brand's trust.</li>
+        </ul>
     </section>
 
     <section id="about" class="container section" data-aos="fade-up">
         <h2 data-aos="fade-in">About Me</h2>
-        <p>I specialize in building high-performance websites using modern web technologies. My focus is on delivering
-            clean UI, optimized code, and results that align with your brand.</p>
-        <p>As a full-stack web developer, I help brands and startups craft their digital presence.</p>
-        <p>My tools of choice include React, Node, Express, and MongoDB, along with pixel-perfect frontend skills in
-            HTML5 and CSS3.</p>
-        <p>I'm focused on performance, accessibility, and clean design that meets real-world business goals.</p>
+        <ul class="point-list">
+            <li>🚀 I am a full-stack developer with expertise in the MERN stack — MongoDB, Express, React, Node.js.</li>
+            <li>🎯 I’ve built everything from landing pages to full-stack web apps with database integration and user
+                auth.</li>
+            <li>🛠️ I follow clean code principles, write reusable components, and deliver maintainable, client-friendly
+                solutions.</li>
+            <li>📦 Whether you're a business, startup, or individual — I turn your vision into clean, functional code.
+            </li>
+        </ul>
     </section>
 
-    <section id="projects" class="container section" data-aos="fade-right">
-        <h2 data-aos="fade-in">Projects</h2>
-        <p>My portfolio includes user-centric websites and full-stack applications. New projects will be added here
+    <section id="projects" class="container section" data-aos="fade-left">
+        <h2>Projects</h2>
+        <p>My portfolio includes user-centric websites and full-stack applications. New projects
+            will be added here
             regularly.</p>
         <div class="project-grid">
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="fade-right">
                 <img src="assets/landing-page.png" alt="Preview ofLanding Page" />
                 <h3>Responsive Landing Page</h3>
                 <p>A fully responsive landing page built with HTML5 & CSS3.</p>
                 <a href="#">Live Demo</a> | <a href="#">Source Code</a>
             </div>
-            <div class="project-card" data-aos="zoom-in">
+            <div class="project-card" data-aos="fade-left">
                 <img src="assets/portfolio-site.png" alt="preview of Portfolio Site" />
                 <h3>Portfolio Website</h3>
                 <p>A modern, mobile-first portfolio website like this one.</p>
@@ -58,11 +66,73 @@
             </div>
         </div>
     </section>
+
+    <section id="services" class="container section" data-aos="fade-right">
+        <h2 data-aos="fade-right">Services i Offer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Personal & Portfolio Websites</h3>
+                <p>I create beautiful, mobile-friendly websites to help you show your work or introduce yourself online.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Business Landing Pages</h3>
+                <p>Need a page that explains your service or product? I build modern, fast-loading pages that impress
+                    visitors.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Contact Forms & Message Pages</h3>
+                <p>I set up custom contact forms so your visitors can reach out directly through your site.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Login & Signup Pages</h3>
+                <p>Want users to log in or register? I create secure login and signup pages tailored for your needs.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Website Hosting & Domain Setup</h3>
+                <p>I publish your website online and help connect it with your custom domain like yourname.com.</p>
+            </div>
+            <div class="service-card">
+                <h3>Frontend Development</h3>
+                <p>Pixel-perfect, responsive UIs using HTML, CSS, JavaScript, and React.</p>
+            </div>
+            <div class="service-card">
+                <h3>Backend Development</h3>
+                <p>REST APIs, authentication, and MongoDB databases with Node.js & Express.</p>
+            </div>
+            <div class="service-card">
+                <h3>Landing Pages for Brands</h3>
+                <p>Conversion-optimized landing pages for products, startups, and businesses — mobile-first and blazing
+                    fast.</p>
+            </div>
+            <div class="service-card">
+                <h3>React Web Interfaces</h3>
+                <p>Interactive React UIs built with clean components, animations, and real-world responsiveness.</p>
+            </div>
+            <div class="service-card">
+                <h3>User Login & Auth Systems</h3>
+                <p>Backend authentication using Node, Express, and MongoDB for secure access and user control.</p>
+            </div>
+            <div class="service-card">
+                <h3>Deployment & Hosting</h3>
+                <p>End-to-end setup of your site on Netlify, Vercel, or Render — including domain, SSL, and
+                    optimizations.</p>
+            </div>
+            
+        </div>
+    </section>
+
     <section id="contact" class="container section" data-aos="fade-left">
         <h2 data-aos="fade-in">Contact</h2>
-        <p>Email: razorcodes@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/razorcodes" target="_blank">github.com/razorcodes</a></p>
-        <form class="contact-form">
+        <p class="highlight-link">Email: razorcodes.here@gmail.com </p>
+        <p class="highlight-link">GitHub: <a href="https://github.com/razor-codes-bit"
+                target="_blank">github.com/razor-codes-bit</a></p>
+
+        <form class="contact-form" data-aos="fade-right">
             <label for="name">Name</label>
             <input id="name" type="text" placeholder="Your Name" required />
 
@@ -79,15 +149,12 @@
     <footer>
         <p>© 2025 Razor Coder. All rights reserved.</p>
     </footer>
-
-    <!-- Scripts For AOS & Scrolltotop button -->
-
+    <!-- Scripts For AOS & Scrolltotop button & Pro css features-->
     <script>
-        // Shows button on scroll
+        // Shows button on after scroll (not at top)
         window.onscroll = function () {
             document.getElementById("scrollTopBtn").style.display = window.scrollY > 300 ? "block" : "none";
         };
-
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
