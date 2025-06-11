@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Razor Coder | Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <h1 data-aos="fade-in">Razor Coder⚡</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="container section" data-aos="fade-up">
+        <h2>Hi, I'm Razor Coder</h2>
+        <p>I craft responsive, elegant websites and full-stack web solutions tailored for modern businesses.</p>
+        <p>I specialize in clean design, efficient code, and full-stack development using the MERN stack.</p>
+    </section>
+
+    <section id="about" class="container section" data-aos="fade-up">
+        <h2 data-aos="fade-in">About Me</h2>
+        <p>I specialize in building high-performance websites using modern web technologies. My focus is on delivering
+            clean UI, optimized code, and results that align with your brand.</p>
+        <p>As a full-stack web developer, I help brands and startups craft their digital presence.</p>
+        <p>My tools of choice include React, Node, Express, and MongoDB, along with pixel-perfect frontend skills in
+            HTML5 and CSS3.</p>
+        <p>I'm focused on performance, accessibility, and clean design that meets real-world business goals.</p>
+    </section>
+
+    <section id="projects" class="container section" data-aos="fade-right">
+        <h2 data-aos="fade-in">Projects</h2>
+        <p>My portfolio includes user-centric websites and full-stack applications. New projects will be added here
+            regularly.</p>
+        <div class="project-grid">
+            <div class="project-card" data-aos="zoom-in">
+                <img src="assets/landing-page.png" alt="Preview ofLanding Page" />
+                <h3>Responsive Landing Page</h3>
+                <p>A fully responsive landing page built with HTML5 & CSS3.</p>
+                <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+            </div>
+            <div class="project-card" data-aos="zoom-in">
+                <img src="assets/portfolio-site.png" alt="preview of Portfolio Site" />
+                <h3>Portfolio Website</h3>
+                <p>A modern, mobile-first portfolio website like this one.</p>
+                <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container section" data-aos="fade-left">
+        <h2 data-aos="fade-in">Contact</h2>
+        <p>Email: razorcodes@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/razorcodes" target="_blank">github.com/razorcodes</a></p>
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your Name" required />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Your Email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+    <footer>
+        <p>© 2025 Razor Coder. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts For AOS & Scrolltotop button -->
+
+    <script>
+        // Shows button on scroll
+        window.onscroll = function () {
+            document.getElementById("scrollTopBtn").style.display = window.scrollY > 300 ? "block" : "none";
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800 });
+    </script>
+
+</body>
+
+</html>
