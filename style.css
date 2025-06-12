@@ -146,8 +146,48 @@ a {
   transition-duration: 1s;
 }
 
-/* ox-shadow: 14px 17px 10px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; */
+.faq-css {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.faq-css details {
+  background-color: #fff5ed;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-css summary {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #5a3e2b;
+  position: relative;
+  list-style: none;
+}
+
+.faq-css summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  color: #a0522d;
+  transition: transform 0.3s ease;
+}
+
+.faq-css details[open] summary::after {
+  content: "–";
+}
+
+.faq-css p{
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
 .highlight-link {
   background-color: #ffe4c4;
   padding: 0.3rem 0.6rem;
