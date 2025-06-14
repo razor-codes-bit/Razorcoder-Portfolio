@@ -232,6 +232,32 @@ a {
   background-color: #a0522d;
 }
 
+#popupMessage {
+  display: none;
+  margin-top: 10px;
+  padding: 0.75rem 1rem;
+  background-color: #ffe4c4;
+  color: #5a3e2b;
+  border: 1px solid #d2691e;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 footer {
   background-color: #f5e6d3;
   text-align: center;

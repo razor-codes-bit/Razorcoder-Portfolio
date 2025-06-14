@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
@@ -222,7 +223,8 @@
             <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
 
             <button type="submit">Send Message</button>
-            <p id="formStatus" style="margin-top: 10px;"></p>
+            <div id="popupMessage" class="popup-message">Thank you for reaching us! We’re available now and will message you within an hour.</div>
+
         </form>
     </section>
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
@@ -230,57 +232,9 @@
         <p>© 2025 Razor Coder. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts For AOS & Scrolltotop button & Pro css features-->
-    <script>
-        // Shows button on after scroll (not at top)
-        window.onscroll = function () {
-            document.getElementById("scrollTopBtn").style.display = window.scrollY > 300 ? "block" : "none";
-        };
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script> AOS.init({ duration: 800 }); </script>
-
-    <script>
-        const form = document.getElementById("contactForm");
-        const status = document.getElementById("formStatus");
-
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                message: form.message.value
-            };
-
-            try {
-                const response = await fetch("https://YOUR_BACKEND_URL/api/contact", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    status.style.color = "green";
-                    status.textContent = "✅ Message sent successfully!";
-                    form.reset();
-                } else {
-                    status.style.color = "red";
-                    status.textContent = "❌ Failed to send message. Please try again later.";
-                }
-            } catch (error) {
-                status.style.color = "red";
-                status.textContent = "❌ An error occurred. Please try again later.";
-            }
-        });
-    </script>
+    <script src="script.js" defer></script>
 
 </body>
 
