@@ -65,7 +65,8 @@
                 <p>A clean, responsive authentication interface built with HTML, CSS, and JavaScript. Smooth transitions
                     and mobile-ready design.</p>
                 <a href="https://razorcodes-login-signup-ui.netlify.app" target="_blank">🔗Live Demo</a> |
-                <a href="https://github.com/razor-codes-bit/login-signup-ui-razorcodes" target="_blank">📂Source Code</a>
+                <a href="https://github.com/razor-codes-bit/login-signup-ui-razorcodes" target="_blank">📂Source
+                    Code</a>
             </div>
 
             <div class="project-card" data-aos="fade-right">
@@ -210,17 +211,18 @@
         <p class="highlight-link">GitHub: <a href="https://github.com/razor-codes-bit"
                 target="_blank">github.com/razor-codes-bit</a></p>
 
-        <form class="contact-form" data-aos="fade-right">
+        <form class="contact-form" data-aos="fade-right" id="contactForm">
             <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your Name" required />
+            <input id="name" name="name" type="text" placeholder="Your Name" required />
 
             <label for="email">Email</label>
-            <input id="email" type="email" placeholder="Your Email" required />
+            <input id="email" name="email" type="email" placeholder="Your Email" required />
 
             <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
 
             <button type="submit">Send Message</button>
+            <p id="formStatus" style="margin-top: 10px;"></p>
         </form>
     </section>
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
@@ -242,6 +244,43 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script> AOS.init({ duration: 800 }); </script>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("formStatus");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+
+            try {
+                const response = await fetch("https://YOUR_BACKEND_URL/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    status.style.color = "green";
+                    status.textContent = "✅ Message sent successfully!";
+                    form.reset();
+                } else {
+                    status.style.color = "red";
+                    status.textContent = "❌ Failed to send message. Please try again later.";
+                }
+            } catch (error) {
+                status.style.color = "red";
+                status.textContent = "❌ An error occurred. Please try again later.";
+            }
+        });
+    </script>
 
 </body>
 
